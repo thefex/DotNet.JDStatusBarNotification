@@ -1,0 +1,244 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name JDStatusBarNotification -package-name JDStatusBarNotification
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension JDStatusBarNotification.NotificationPresenter {
+  @discardableResult
+  @objc(presentWithText:) dynamic public func zlp(t: Swift.String) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithText:completion:) dynamic public func zlp(t: Swift.String, c: JDStatusBarNotification.NotificationPresenter.Completion?) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithTitle:subtitle:completion:) dynamic public func zlp(t: Swift.String, st: Swift.String, c: JDStatusBarNotification.NotificationPresenter.Completion?) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithText:dismissAfterDelay:) dynamic public func zlp(t: Swift.String, d: Swift.Double) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithText:customStyle:) dynamic public func zlp(t: Swift.String, cu: Swift.String) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithText:customStyle:completion:) dynamic public func zlp(t: Swift.String, cu: Swift.String?, c: JDStatusBarNotification.NotificationPresenter.Completion?) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithTitle:subtitle:customStyle:completion:) dynamic public func zlp(t: Swift.String, st: Swift.String?, cu: Swift.String?, c: JDStatusBarNotification.NotificationPresenter.Completion?) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithText:dismissAfterDelay:customStyle:) dynamic public func zlp(t: Swift.String, d: Swift.Double, cu: Swift.String) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithText:includedStyle:) dynamic public func zlp(t: Swift.String, s: JDStatusBarNotification.IncludedStatusBarNotificationStyle) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithText:includedStyle:completion:) dynamic public func zlp(t: Swift.String, s: JDStatusBarNotification.IncludedStatusBarNotificationStyle, c: JDStatusBarNotification.NotificationPresenter.Completion?) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithTitle:subtitle:includedStyle:completion:) dynamic public func zlp(t: Swift.String, st: Swift.String?, s: JDStatusBarNotification.IncludedStatusBarNotificationStyle, c: JDStatusBarNotification.NotificationPresenter.Completion?) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithText:dismissAfterDelay:includedStyle:) dynamic public func zlp(t: Swift.String, d: Swift.Double = 0.0, s: JDStatusBarNotification.IncludedStatusBarNotificationStyle) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithCustomView:styleName:completion:) dynamic public func zlp(cv: UIKit.UIView, s: Swift.String? = nil, c: JDStatusBarNotification.NotificationPresenter.Completion? = nil) -> UIKit.UIView
+  @objc(dismiss) dynamic public func zld()
+  @objc(dismissWithCompletion:) dynamic public func zld(c: JDStatusBarNotification.NotificationPresenter.Completion?)
+  @objc(dismissAnimated:) dynamic public func zld(a: Swift.Bool)
+  @objc(dismissAfterDelay:) dynamic public func zld(d: Swift.Double)
+  @objc(dismissAfterDelay:completion:) dynamic public func zld(d: Swift.Double, c: JDStatusBarNotification.NotificationPresenter.Completion?)
+  @objc(dismissAnimated:afterDelay:completion:) dynamic public func zld(a: Swift.Bool, d: Swift.Double, c: JDStatusBarNotification.NotificationPresenter.Completion?)
+  @discardableResult
+  @objc(addStyleNamed:prepare:) dynamic public func zlas(n: Swift.String, p: (JDStatusBarNotification.StatusBarNotificationStyle) -> JDStatusBarNotification.StatusBarNotificationStyle) -> Swift.String
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(JDStatusBarNotificationPresenter) public class NotificationPresenter : ObjectiveC.NSObject {
+  @objc(sharedPresenter) public static var shared: JDStatusBarNotification.NotificationPresenter {
+    get
+  }
+  public typealias Completion = (_ presenter: JDStatusBarNotification.NotificationPresenter) -> ()
+  public typealias PrepareStyleClosure = (JDStatusBarNotification.StatusBarNotificationStyle) -> JDStatusBarNotification.StatusBarNotificationStyle
+  @discardableResult
+  public func present(_ title: Swift.String, subtitle: Swift.String? = nil, styleName: Swift.String? = nil, duration: Swift.Double? = nil, completion: JDStatusBarNotification.NotificationPresenter.Completion? = nil) -> UIKit.UIView
+  @discardableResult
+  public func present(_ title: Swift.String, subtitle: Swift.String? = nil, includedStyle: JDStatusBarNotification.IncludedStatusBarNotificationStyle, duration: Swift.Double? = nil, completion: JDStatusBarNotification.NotificationPresenter.Completion? = nil) -> UIKit.UIView
+  @discardableResult
+  @objc(presentWithCustomView:sizingController:styleName:completion:) public func presentCustomView(_ customView: UIKit.UIView, sizingController: (any JDStatusBarNotification.NotificationPresenterCustomViewSizingController)? = nil, styleName: Swift.String? = nil, completion: JDStatusBarNotification.NotificationPresenter.Completion? = nil) -> UIKit.UIView
+  @discardableResult
+  public func presentSwiftView(styleName: Swift.String? = nil, @SwiftUICore.ViewBuilder viewBuilder: () -> some View, completion: JDStatusBarNotification.NotificationPresenter.Completion? = nil) -> UIKit.UIView
+  public func dismiss(animated: Swift.Bool = true, after delay: Swift.Double? = nil, completion: JDStatusBarNotification.NotificationPresenter.Completion? = nil)
+  @objc public func updateDefaultStyle(_ prepare: (JDStatusBarNotification.StatusBarNotificationStyle) -> JDStatusBarNotification.StatusBarNotificationStyle)
+  @discardableResult
+  @objc(addStyleNamed:basedOnStyle:prepare:) public func addStyle(named name: Swift.String, usingStyle includedStyle: JDStatusBarNotification.IncludedStatusBarNotificationStyle = .defaultStyle, prepare: (JDStatusBarNotification.StatusBarNotificationStyle) -> JDStatusBarNotification.StatusBarNotificationStyle) -> Swift.String
+  @objc(displayProgressBarWithPercentage:) public func displayProgressBar(at percentage: Swift.Double)
+  @objc(animateProgressBarToPercentage:animationDuration:completion:) public func animateProgressBar(to percentage: Swift.Double, duration: Swift.Double, completion: JDStatusBarNotification.NotificationPresenter.Completion?)
+  @objc(displayActivityIndicator:) public func displayActivityIndicator(_ show: Swift.Bool)
+  @objc(displayLeftView:) public func displayLeftView(_ leftView: UIKit.UIView?)
+  @objc(updateText:) public func updateTitle(_ title: Swift.String)
+  @objc(updateSubtitle:) public func updateSubtitle(_ subtitle: Swift.String?)
+  @objc public var isVisible: Swift.Bool {
+    @objc get
+  }
+  @objc public func setWindowScene(_ windowScene: UIKit.UIWindowScene?)
+  @objc deinit
+}
+@objc(JDStatusBarNotificationPresenterCustomViewSizingController) public protocol NotificationPresenterCustomViewSizingController {
+  @objc(sizeThatFits:) func sizeThatFits(in size: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+}
+@objc(JDStatusBarNotificationIncludedStyle) public enum IncludedStatusBarNotificationStyle : Swift.Int {
+  case defaultStyle
+  case light
+  case dark
+  case success
+  case warning
+  case error
+  case matrix
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(JDStatusBarNotificationBackgroundType) public enum StatusBarNotificationBackgroundType : Swift.Int {
+  case fullWidth
+  case pill
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(JDStatusBarNotificationAnimationType) public enum StatusBarNotificationAnimationType : Swift.Int {
+  case move
+  case bounce
+  case fade
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(JDStatusBarNotificationProgressBarPosition) public enum StatusBarNotificationProgressBarPosition : Swift.Int {
+  case bottom
+  case center
+  case top
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(JDStatusBarNotificationSystemBarStyle) public enum StatusBarNotificationSystemBarStyle : Swift.Int {
+  case defaultStyle
+  case lightContent
+  case darkContent
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc(JDStatusBarNotificationLeftViewAlignment) public enum StatusBarNotificationLeftViewAlignment : Swift.Int {
+  case left
+  case centerWithText
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol StylableView : UIKit.UIView {
+  var style: JDStatusBarNotification.StatusBarNotificationStyle { get set }
+}
+@_inheritsConvenienceInitializers @objc(JDStatusBarNotificationStyle) public class StatusBarNotificationStyle : ObjectiveC.NSObject {
+  @objc public var textStyle: JDStatusBarNotification.StatusBarNotificationTextStyle
+  @objc public var subtitleStyle: JDStatusBarNotification.StatusBarNotificationTextStyle
+  @objc public var backgroundStyle: JDStatusBarNotification.StatusBarNotificationBackgroundStyle
+  @objc public var progressBarStyle: JDStatusBarNotification.StatusBarNotificationProgressBarStyle
+  @objc public var leftViewStyle: JDStatusBarNotification.StatusBarNotificationLeftViewStyle
+  @objc public var systemStatusBarStyle: JDStatusBarNotification.StatusBarNotificationSystemBarStyle
+  @objc public var animationType: JDStatusBarNotification.StatusBarNotificationAnimationType
+  @objc public var canSwipeToDismiss: Swift.Bool
+  @objc public var canTapToHold: Swift.Bool
+  @objc public var canDismissDuringUserInteraction: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(JDStatusBarNotificationLeftViewStyle) public class StatusBarNotificationLeftViewStyle : ObjectiveC.NSObject {
+  @objc public var spacing: Swift.Double
+  @available(*, deprecated, renamed: "offset")
+  @objc public var offsetX: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc public var offset: CoreFoundation.CGPoint
+  @objc public var tintColor: UIKit.UIColor?
+  @objc public var alignment: JDStatusBarNotification.StatusBarNotificationLeftViewAlignment
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(JDStatusBarNotificationTextStyle) public class StatusBarNotificationTextStyle : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc public init(textColor: UIKit.UIColor? = nil, font: UIKit.UIFont? = nil)
+  @objc public var textColor: UIKit.UIColor?
+  @objc public var font: UIKit.UIFont?
+  @available(*, deprecated, renamed: "shadowColor")
+  @objc public var textShadowColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc public var shadowColor: UIKit.UIColor?
+  @available(*, deprecated, renamed: "shadowOffset")
+  @objc public var textShadowOffset: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc public var shadowOffset: CoreFoundation.CGPoint
+  @objc public var textOffsetY: Swift.Double
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(JDStatusBarNotificationPillStyle) public class StatusBarNotificationPillStyle : ObjectiveC.NSObject {
+  @objc public var height: Swift.Double
+  @objc public var topSpacing: Swift.Double
+  @objc public var minimumWidth: Swift.Double
+  @objc public var borderColor: UIKit.UIColor?
+  @objc public var borderWidth: Swift.Double
+  @objc public var shadowColor: UIKit.UIColor?
+  @objc public var shadowRadius: Swift.Double
+  @available(*, deprecated, renamed: "shadowOffsetXY")
+  @objc public var shadowOffset: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+  @objc public var shadowOffsetXY: CoreFoundation.CGPoint
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(JDStatusBarNotificationBackgroundStyle) public class StatusBarNotificationBackgroundStyle : ObjectiveC.NSObject {
+  @objc public var backgroundColor: UIKit.UIColor?
+  @objc public var backgroundType: JDStatusBarNotification.StatusBarNotificationBackgroundType
+  @objc public var pillStyle: JDStatusBarNotification.StatusBarNotificationPillStyle
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(JDStatusBarNotificationProgressBarStyle) public class StatusBarNotificationProgressBarStyle : ObjectiveC.NSObject {
+  @objc public var barColor: UIKit.UIColor?
+  @objc public var barHeight: Swift.Double
+  @objc public var position: JDStatusBarNotification.StatusBarNotificationProgressBarPosition
+  @objc public var horizontalInsets: Swift.Double
+  @objc public var offsetY: Swift.Double
+  @objc public var cornerRadius: Swift.Double
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension JDStatusBarNotification.IncludedStatusBarNotificationStyle : Swift.Equatable {}
+extension JDStatusBarNotification.IncludedStatusBarNotificationStyle : Swift.Hashable {}
+extension JDStatusBarNotification.IncludedStatusBarNotificationStyle : Swift.RawRepresentable {}
+extension JDStatusBarNotification.StatusBarNotificationBackgroundType : Swift.Equatable {}
+extension JDStatusBarNotification.StatusBarNotificationBackgroundType : Swift.Hashable {}
+extension JDStatusBarNotification.StatusBarNotificationBackgroundType : Swift.RawRepresentable {}
+extension JDStatusBarNotification.StatusBarNotificationAnimationType : Swift.Equatable {}
+extension JDStatusBarNotification.StatusBarNotificationAnimationType : Swift.Hashable {}
+extension JDStatusBarNotification.StatusBarNotificationAnimationType : Swift.RawRepresentable {}
+extension JDStatusBarNotification.StatusBarNotificationProgressBarPosition : Swift.Equatable {}
+extension JDStatusBarNotification.StatusBarNotificationProgressBarPosition : Swift.Hashable {}
+extension JDStatusBarNotification.StatusBarNotificationProgressBarPosition : Swift.RawRepresentable {}
+extension JDStatusBarNotification.StatusBarNotificationSystemBarStyle : Swift.Equatable {}
+extension JDStatusBarNotification.StatusBarNotificationSystemBarStyle : Swift.Hashable {}
+extension JDStatusBarNotification.StatusBarNotificationSystemBarStyle : Swift.RawRepresentable {}
+extension JDStatusBarNotification.StatusBarNotificationLeftViewAlignment : Swift.Equatable {}
+extension JDStatusBarNotification.StatusBarNotificationLeftViewAlignment : Swift.Hashable {}
+extension JDStatusBarNotification.StatusBarNotificationLeftViewAlignment : Swift.RawRepresentable {}

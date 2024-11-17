@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>iOS.JDStatusBarNotification</id>
+        <version>2.2.0</version>
+        <title>iOS.JDStatusBarNotification</title>
+        <authors>Przemysław Raciborski [thefex]</authors>
+        <projectUrl>https://github.com/thefex/DotNet.JDStatusBarNotification</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>iOS .NET bindings library for latest JDStatusBarNotification - https://github.com/calimarkus/JDStatusBarNotification.git</description>
+        <dependencies>
+            <group targetFramework="net8.0-ios18"/>
+            <group targetFramework="net9.0-ios18"/>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="DotNet.JDStatusBarNotification/bin/Release/net8.0-ios18/**/*" target="lib/net8.0-ios18" />
+        <file src="DotNet.JDStatusBarNotification/bin/Release/net9.0-ios18/**/*" target="lib/net9.0-ios18" />
+    </files>
+</package>

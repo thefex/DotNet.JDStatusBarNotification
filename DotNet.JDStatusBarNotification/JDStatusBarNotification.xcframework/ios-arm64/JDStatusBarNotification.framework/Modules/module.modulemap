@@ -1,0 +1,4 @@
+framework module JDStatusBarNotification {
+  header "Swift-To-ObjC-Header.h"
+  requires objc
+}
