@@ -1,0 +1,3 @@
+[submodule "external/JDStatusBarNotification"]
+	path = external/JDStatusBarNotification
+	url = https://github.com/calimarkus/JDStatusBarNotification
